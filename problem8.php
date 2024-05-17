@@ -174,3 +174,50 @@ echo '</pre>';
 //   [3] => D
 // )
 echo '<hr>';
+$nums = [1, 2, 3, 4, 5, 6];
+echo '<pre>';
+print_r(array_slice($nums,-5,-2));
+echo '</pre>';
+// Output
+// Array
+// (
+//   [0] => 2
+//   [1] => 3
+//   [2] => 4
+// )
+echo '<hr>';
+$mix = [1, 2, 3, "A", "B", "C", 7, 8, 9];
+$nums = [4, 5, 6];
+
+// Write Your Code Here
+array_splice($mix,3,3,$nums);
+echo '<pre>';
+print_r($mix);
+echo '</pre>';
+
+// Output
+// Array
+// (
+//   [0] => 1
+//   [1] => 2
+//   [2] => 3
+//   [3] => 4
+//   [4] => 5
+//   [5] => 6
+//   [6] => 7
+//   [7] => 8
+//   [8] => 9
+// )
+echo '<hr>';
+$arr = ["A", "B", "C", "D", "E"];
+$counter = 0;
+while($arr){
+  $counter++;
+ 
+}
+echo $counter;
+
+
+
+// Output
+// 5
