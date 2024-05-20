@@ -145,25 +145,24 @@ echo '<hr>';
 $chars = ["A", "B", "C"];
 
 // 1 = > array_push
-array_push($chars,"D");
+array_push($chars, "D");
 echo '<pre>';
 print_r($chars);
 echo '</pre>';
 // 2 = array pop
-array_pad($chars,1,"D");
+array_pad($chars, 1, "D");
 echo '<pre>';
 print_r($chars);
 echo '</pre>';
 // 3 array_merge
 $array = ["D"];
-array_merge($chars,$array);
+array_merge($chars, $array);
 echo '<pre>';
 print_r($chars);
 echo '</pre>';
-// 4 with 
-$chars[] = "D";
+// 4 with array slice 
 echo '<pre>';
-print_r($chars);
+print_r(array_slice($chars, 0));
 echo '</pre>';
 // Output
 // Array
@@ -176,7 +175,7 @@ echo '</pre>';
 echo '<hr>';
 $nums = [1, 2, 3, 4, 5, 6];
 echo '<pre>';
-print_r(array_slice($nums,-5,-2));
+print_r(array_slice($nums, -5, -2));
 echo '</pre>';
 // Output
 // Array
@@ -190,7 +189,7 @@ $mix = [1, 2, 3, "A", "B", "C", 7, 8, 9];
 $nums = [4, 5, 6];
 
 // Write Your Code Here
-array_splice($mix,3,3,$nums);
+array_splice($mix, 3, 3, $nums);
 echo '<pre>';
 print_r($mix);
 echo '</pre>';
@@ -210,14 +209,44 @@ echo '</pre>';
 // )
 echo '<hr>';
 $arr = ["A", "B", "C", "D", "E"];
-$counter = 0;
-while($arr){
-  $counter++;
- 
+$count = 0;
+foreach ($arr as $array) {
+  $count++;
 }
-echo $counter;
-
-
+echo $count;
 
 // Output
 // 5
+echo '<hr>';
+
+$nums = [11, 2, 10, 7, 20, 50];
+$result = 0;
+foreach ($nums as $num) {
+  $result += $num;
+}
+echo $result;
+// Output
+// 100
+echo '<hr>';
+$nums = [10, 100, -20, 50, 30];
+$max = $nums[0];
+foreach ($nums as $num) {
+  if ($num > $max) {
+    $max = $num;
+  }
+}
+echo $max;
+// Output
+// 100
+echo '<hr>';
+$nums = [10, 100, -20, 50, 30];
+$min = $nums[0];
+foreach ($nums as $num) {
+  if ($num < $min) {
+    $min = $num;
+  }
+}
+echo $min;
+// Output
+// -20
+echo '<hr>';
