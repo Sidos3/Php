@@ -250,3 +250,13 @@ echo $min;
 // Output
 // -20
 echo '<hr>';
+$chars = ["o", "r", "e", "z", "l", "E"];
+$count = 0;
+foreach ($chars as $char) {
+  $count++;
+}
+for ($i = $count; $i >= 0; $i--) {
+  echo $chars[$i];
+}
+// Output
+// "Elzero"
